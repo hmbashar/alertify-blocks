@@ -1,9 +1,6 @@
 # Dependencies
-/node_modules
+node_modules/
 /vendor
-
-# Git
-.git/
 
 # Build files
 /blocks/build/*.asset.php
