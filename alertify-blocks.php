@@ -5,7 +5,22 @@
  * Version: 1.0.0
  * Author: Md Abul Bashar
  * Text Domain: alertify-blocks
+ * License: GPLv2 or later
+ * License URI:
+ * License URI: URL_ADDRESS.gnu.org/licenses/gpl-2.0.html
+ * Requires at least: 5.0
+ * Requires PHP: 8.0
+ * Tested up to: 6.8
+ * 
+ * @since 1.0.0
+ * @author Md Abul Bashar
+ * @copyright Copyright (c) 2025, Md Abul Bashar
+ * @license GPLv2 or later
+ * @link @license GPLv2 or later
+ * @package ALERTIFY\Includes
  */
+
+namespace ALERTIFY;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -15,30 +30,21 @@ define('ALERTIFY_BLOCKS_VERSION', '1.0.0');
 define('ALERTIFY_BLOCKS_DIR', plugin_dir_path(__FILE__));
 define('ALERTIFY_BLOCKS_URL', plugin_dir_url(__FILE__));
 
-require_once ALERTIFY_BLOCKS_DIR . 'includes/class-alertify-blocks-loader.php';
-
-/**
- * Registers the block using a `blocks-manifest.php` file, which improves the performance of block type registration.
- * Behind the scenes, it also registers all assets so they can be enqueued
- * through the block editor in the corresponding context.
- */
-function alertify_blocks_block_init() {
-    // Initialize the loader
-    $loader = new Alertify_Blocks_Loader();
-
-    // Register blocks using manifest file
-    if (function_exists('wp_register_block_types_from_metadata_collection')) {
-        wp_register_block_types_from_metadata_collection(ALERTIFY_BLOCKS_DIR . 'blocks/build', ALERTIFY_BLOCKS_DIR . 'blocks/build/blocks-manifest.php');
-        return;
-    }
-
-    if (function_exists('wp_register_block_metadata_collection')) {
-        wp_register_block_metadata_collection(ALERTIFY_BLOCKS_DIR . 'blocks/build', ALERTIFY_BLOCKS_DIR . 'blocks/build/blocks-manifest.php');
-    }
-
-    $manifest_data = require ALERTIFY_BLOCKS_DIR . 'blocks/build/blocks-manifest.php';
-    foreach (array_keys($manifest_data) as $block_type) {
-        register_block_type(ALERTIFY_BLOCKS_DIR . "blocks/build/{$block_type}");
-    }
+// Check if the class exists before loading
+if (!class_exists('\ALERTIFY\Includes\Loader')) {
+    require_once ALERTIFY_BLOCKS_DIR . 'includes/class-alertify-blocks-loader.php';
 }
-add_action('init', 'alertify_blocks_block_init');
+
+// Initialize the loader only if the class exists
+if (class_exists('\ALERTIFY\Includes\Loader')) {
+    Includes\Loader::get_instance();
+} else {
+    // Log error or show admin notice if the class failed to load
+    add_action('admin_notices', function() {
+        ?>
+        <div class="notice notice-error">
+            <p><?php _e('Alertify Blocks: Required class could not be loaded.', 'alertify-blocks'); ?></p>
+        </div>
+        <?php
+    });
+}

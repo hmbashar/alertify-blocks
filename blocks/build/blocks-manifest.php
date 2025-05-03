@@ -1,27 +1,40 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
-	'blocks' => array(
-		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+	'dismissible-notice' => array(
 		'apiVersion' => 3,
-		'name' => 'alertify/blocks',
-		'version' => '0.1.0',
-		'title' => 'notice',
+		'name' => 'alertify/dismissible-notice',
+		'title' => 'Dismissible Notice',
 		'category' => 'widgets',
-		'icon' => 'smiley',
-		'description' => 'Example block scaffolded with Create Block tool.',
-		'example' => array(
-			
+		'icon' => 'megaphone',
+		'description' => 'A notice block that visitors can dismiss (close).',
+		'attributes' => array(
+			'content' => array(
+				'type' => 'string',
+				'source' => 'html',
+				'selector' => '.alertify-box-content'
+			),
+			'noticeType' => array(
+				'type' => 'string',
+				'default' => 'info'
+			),
+			'dismissDuration' => array(
+				'type' => 'number',
+				'default' => 24
+			)
 		),
 		'supports' => array(
-			'html' => false
+			'html' => false,
+			'color' => array(
+				'background' => true,
+				'text' => true
+			),
+			'spacing' => true,
+			'typography' => true
 		),
-		'textdomain' => 'blocks',
 		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
-		'render' => 'file:./render.php',
-		'viewScript' => 'file:./view.js'
+		'script' => 'file:./dismissible-notice.js'
 	),
 	'notice-box' => array(
 		'apiVersion' => 3,
