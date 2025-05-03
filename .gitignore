@@ -2,6 +2,10 @@
 node_modules/
 /vendor
 
+# Package Lock Files
+package-lock.json
+**/package-lock.json
+
 # Build files
 /blocks/build/*.asset.php
 /blocks/build/*.js.map
