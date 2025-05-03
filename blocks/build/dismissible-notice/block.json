@@ -18,6 +18,9 @@
     "dismissDuration": {
       "type": "number",
       "default": 24
+    },
+    "alertId": {
+      "type": "string"
     }
   },
   "supports": {

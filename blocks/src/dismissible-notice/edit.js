@@ -5,12 +5,22 @@ import {
     InspectorControls
 } from '@wordpress/block-editor';
 import { PanelBody, SelectControl, RangeControl } from '@wordpress/components';
+import { useEffect } from '@wordpress/element';
 
 export default function Edit({ attributes, setAttributes, clientId }) {
-    const { content, noticeType, dismissDuration } = attributes;
+    const { content, noticeType, dismissDuration, alertId } = attributes;
+
+    // Generate unique alertId only once
+    useEffect(() => {
+        if (!alertId) {
+            const newId = clientId || Math.random().toString(36).substr(2, 9);
+            setAttributes({ alertId: newId });
+        }
+    }, []);
 
     const blockProps = useBlockProps({
-        className: `alertify-box alertify-${noticeType} alertify-dismissible`
+        className: `alertify-box alertify-${noticeType} alertify-dismissible`,
+        'data-alert-id': alertId // use the stored alertId
     });
 
     return (

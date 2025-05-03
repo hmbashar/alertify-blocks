@@ -21,6 +21,9 @@ return array(
 			'dismissDuration' => array(
 				'type' => 'number',
 				'default' => 24
+			),
+			'alertId' => array(
+				'type' => 'string'
 			)
 		),
 		'supports' => array(
