@@ -8,7 +8,7 @@
   \*******************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":3,"name":"alertify/dismissible-notice","title":"Dismissible Notice","category":"widgets","icon":"megaphone","description":"A notice block that visitors can dismiss (close).","attributes":{"content":{"type":"string","source":"html","selector":".alertify-box-content"},"noticeType":{"type":"string","default":"info"},"dismissDuration":{"type":"number","default":24}},"supports":{"html":false,"color":{"background":true,"text":true},"spacing":true,"typography":true},"editorScript":"file:./index.js","style":"file:./style-index.css","script":"file:./dismissible-notice.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":3,"name":"alertify/dismissible-notice","title":"Dismissible Notice","category":"widgets","icon":"megaphone","description":"A notice block that visitors can dismiss (close).","attributes":{"content":{"type":"string","source":"html","selector":".alertify-box-content"},"noticeType":{"type":"string","default":"info"},"dismissDuration":{"type":"number","default":24}},"supports":{"html":false,"color":{"background":true,"text":true},"spacing":true,"typography":true},"editorScript":"file:./index.js","style":"file:./style-index.css","viewScript":"file:./dismissible-notice.js"}');
 
 /***/ }),
 
@@ -168,13 +168,10 @@ function save({
     noticeType,
     dismissDuration
   } = attributes;
-  const uniqueId = Math.random().toString(36).substr(2, 9); // simple unique ID
-
+  const uniqueId = Math.random().toString(36).substr(2, 9); // simple unique ID   
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save({
-      className: `alertify-box alertify-${noticeType} alertify-dismissible`,
-      'data-alert-id': uniqueId,
-      'data-dismiss-duration': dismissDuration
+      className: `alertify-box alertify-${noticeType} alertify-dismissible`
     }),
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
       className: "alertify-close",

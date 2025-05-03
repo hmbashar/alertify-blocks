@@ -15,14 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const now = Date.now();
       const hoursPassed = (now - dismissedTime) / (1000 * 60 * 60);
       if (hoursPassed < dismissDuration) {
-        alertBox.style.display = 'none';
-        return; // skip adding event listener
+        // 🔥 Instead of hiding with CSS, REMOVE from DOM completely:
+        alertBox.remove();
+        return; // Skip adding event listener
       }
     }
+
+    // Add event listener for close button
     const closeBtn = alertBox.querySelector('.alertify-close');
     if (closeBtn) {
       closeBtn.addEventListener('click', () => {
-        alertBox.style.display = 'none';
+        alertBox.remove(); // Remove from DOM immediately
         localStorage.setItem(dismissKey, Date.now().toString());
       });
     }

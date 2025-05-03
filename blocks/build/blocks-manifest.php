@@ -34,7 +34,7 @@ return array(
 		),
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./style-index.css',
-		'script' => 'file:./dismissible-notice.js'
+		'viewScript' => 'file:./dismissible-notice.js'
 	),
 	'notice-box' => array(
 		'apiVersion' => 3,
