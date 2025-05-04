@@ -1,0 +1,75 @@
+.alertify-inline {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.95em;
+    line-height: 1.3;
+}
+
+/* Color variations */
+.alertify-inline.alertify-info {
+    background-color: #e7f3fe;
+    color: #0c5460;
+}
+
+.alertify-inline.alertify-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alertify-inline.alertify-warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.alertify-inline.alertify-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+.wp-block-alertify-inline-message {
+    display: inline !important;
+}
+.alertify-inline {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    line-height: 1.3;
+}
+
+.alertify-inline.alertify-pill {
+    border-radius: 9999px;
+}
+
+.alertify-inline.alertify-square {
+    border-radius: 4px;
+}
+
+.alertify-inline-icon {
+    margin-right: 4px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1em;
+}
+
+/* Color variations */
+.alertify-inline.alertify-info {
+    background-color: #e7f3fe;
+    color: #0c5460;
+}
+
+.alertify-inline.alertify-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alertify-inline.alertify-warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.alertify-inline.alertify-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}

@@ -39,6 +39,54 @@ return array(
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./dismissible-notice.js'
 	),
+	'inline-message' => array(
+		'apiVersion' => 3,
+		'name' => 'alertify/inline-message',
+		'title' => 'Inline Message',
+		'category' => 'widgets',
+		'icon' => 'editor-underline',
+		'description' => 'Highlight a short message inline inside text.',
+		'attributes' => array(
+			'text' => array(
+				'type' => 'string',
+				'source' => 'html',
+				'selector' => 'span.alertify-inline-text'
+			),
+			'noticeType' => array(
+				'type' => 'string',
+				'default' => 'info'
+			),
+			'showIcon' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'icon' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'shape' => array(
+				'type' => 'string',
+				'default' => 'pill'
+			),
+			'alertId' => array(
+				'type' => 'string'
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'background' => true,
+				'text' => true
+			),
+			'typography' => true,
+			'spacing' => false,
+			'anchor' => false,
+			'multiple' => true,
+			'inserter' => true
+		),
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./style-index.css'
+	),
 	'notice-box' => array(
 		'apiVersion' => 3,
 		'name' => 'alertify/notice-box',

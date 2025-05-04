@@ -1,0 +1,27 @@
+{
+	"name": "alertify-blocks",
+	"version": "0.1.0",
+	"description": "Example block scaffolded with Create Block tool.",
+	"author": "hmbashar",
+	"license": "GPL-2.0-or-later",
+	"scripts": {
+		"build": "wp-scripts build --webpack-copy-php --blocks-manifest",
+		"build:blocks": "cd blocks && npm run build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start --webpack-copy-php --blocks-manifest",
+		"zip": "npm run build:blocks && dir-archiver --src . --dest ../alertify-blocks.zip --exclude '**/.DS_Store' .git .distignore .gitattributes .github .gitignore .editorconfig .wordpress-org README.md composer.lock node_modules package-lock.json phpcs.xml.dist blocks/node_modules"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^30.14.1",
+		 "dir-archiver": "^2.1.0"
+	},
+	"dependencies": {
+		"@wordpress/components": "^29.8.0",
+		"@wordpress/icons": "^10.22.0",
+		"cors": "^2.8.5"
+	}
+}
