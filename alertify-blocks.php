@@ -5,7 +5,9 @@
  * Version: 1.0.0
  * Author: MD.NESAR MRIDHA
  * Text Domain: alertify-blocks
- * License: GPLv2 or later * 
+ * License: GPL-2.0-or-later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ *
  * Requires at least: 5.0
  * Requires PHP: 8.0
  * Tested up to: 6.8
@@ -13,8 +15,6 @@
  * @since 1.0.0
  * @author MD.NESAR MRIDHA
  * @copyright Copyright (c) 2025, MD.NESAR MRIDHA
- * @license GPLv2 or later
- * @link @license GPLv2 or later
  * @package ALERTIFY\Includes
  */
 

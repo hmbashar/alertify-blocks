@@ -13,6 +13,6 @@
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
 		"start": "wp-scripts start --webpack-copy-php --blocks-manifest",
-		"zip": "npm run build:blocks && dir-archiver --src . --dest ../alertify-blocks.zip --exclude '**/.DS_Store' .git .distignore .gitattributes .github .gitignore .editorconfig .wordpress-org README.md composer.lock node_modules package-lock.json phpcs.xml.dist blocks/node_modules"
+		"zip": "npm run build:blocks && dir-archiver --src . --dest ../alertify-blocks.zip --exclude '**/.DS_Store' .git .distignore .gitattributes .github .gitignore .editorconfig .wordpress-org README.md composer.lock node_modules package-lock.json phpcs.xml.dist blocks/node_modules blocks/.editorconfig blocks/.gitignore blocks/.DS_Store blocks/package-lock.json blocks/composer.lock blocks/package.json blocks/README.md blocks/phpcs.xml.dist blocks/wp-scripts.config.js blocks/webpack.config.js"
 	}
 }

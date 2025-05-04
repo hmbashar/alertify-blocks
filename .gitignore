@@ -22,6 +22,8 @@ package-lock.json
 .idea/
 *.sublime-project
 *.sublime-workspace
+.editorconfig
+**/.editorconfig
 
 # Logs
 *.log
