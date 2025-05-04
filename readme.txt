@@ -1,6 +1,6 @@
 === Alertify Blocks ===
 Contributors: mdnesarmridha
-Tags: alert, notice, notification, dismissible notice, gutenberg blocks, blocks
+Tags: alert, notice, notification, dismissible notice, gutenberg blocks
 Requires at least: 5.0
 Tested up to: 6.8
 Stable tag: 1.0.0
