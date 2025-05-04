@@ -1,8 +1,8 @@
 {
 	"name": "alertify-blocks",
 	"version": "0.1.0",
-	"description": "Example block scaffolded with Create Block tool.",
-	"author": "hmbashar",
+	"description": "A collection of custom Gutenberg blocks for creating beautiful alerts and notifications in WordPress",
+	"author": "mdnesarmridha",
 	"license": "GPL-2.0-or-later",
 	"scripts": {
 		"build": "wp-scripts build --webpack-copy-php --blocks-manifest",

@@ -2,8 +2,6 @@
 
 A collection of beautiful alert/notice blocks for the WordPress block editor. Perfect for displaying important messages, warnings, success notifications, and more on your website.
 
-![Alertify Blocks](assets/images/banner.png)
-
 ## Features
 
 - **Multiple Alert Types**

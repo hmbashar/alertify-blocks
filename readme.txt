@@ -73,8 +73,3 @@ Yes, all alert blocks are fully responsive and look great on all devices.
 
 = 1.0.0 =
 Initial release with basic and dismissible alert blocks.
-
-== Additional Info ==
-
-* For support: [Plugin Support Forum](https://wordpress.org/support/plugin/alertify-blocks/)
-* For development: [GitHub Repository](https://github.com/hmbashar/alertify-blocks)
