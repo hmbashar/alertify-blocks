@@ -5,6 +5,7 @@
 	"author": "mdnesarmridha",
 	"license": "GPL-2.0-or-later",
 	"scripts": {
+		"i:b": "npm install --prefix blocks",
 		"build": "wp-scripts build --webpack-copy-php --blocks-manifest",
 		"build:blocks": "cd blocks && npm run build",
 		"format": "wp-scripts format",
@@ -12,7 +13,10 @@
 		"lint:js": "wp-scripts lint-js",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"start": "wp-scripts start --webpack-copy-php --blocks-manifest",
+		"start": "cd blocks && npm run start",
 		"zip": "npm run build:blocks && dir-archiver --src . --dest ../alertify-blocks.zip --exclude '**/.DS_Store' .git .distignore .gitattributes .github .gitignore .editorconfig .wordpress-org README.md composer.lock node_modules package-lock.json phpcs.xml.dist blocks/node_modules blocks/.editorconfig blocks/.gitignore blocks/.DS_Store blocks/package-lock.json blocks/composer.lock blocks/package.json blocks/README.md blocks/phpcs.xml.dist blocks/wp-scripts.config.js blocks/webpack.config.js"
-	}
+	},	
+  "devDependencies": {
+    "dir-archiver": "^2.1.0"
+  }
 }
