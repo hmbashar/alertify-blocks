@@ -41,7 +41,7 @@ if (class_exists('\ALERTIFY\Includes\Loader')) {
     add_action('admin_notices', function() {
         ?>
         <div class="notice notice-error">
-            <p><?php _e('Alertify Blocks: Required class could not be loaded.', 'alertify-blocks'); ?></p>
+            <p><?php esc_html_e('Alertify Blocks: Required class could not be loaded.', 'alertify-blocks'); ?></p>
         </div>
         <?php
     });
