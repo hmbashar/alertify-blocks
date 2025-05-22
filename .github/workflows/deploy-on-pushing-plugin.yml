@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies and build
         run: |
           npm ci
-          npm run build:blocks   
+          npm run build   
 
       - name: WordPress Plugin Deploy
         id: deploy
