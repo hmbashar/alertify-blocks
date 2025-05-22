@@ -3,7 +3,7 @@
  * Plugin Name: Alertify Blocks
  * Description: A collection of beautiful alert/notice blocks for the WordPress block editor.
  * Version: 0.1.0
- * Author: MD.NESAR MRIDHA
+ * Author: Md Abul Bashar
  * Text Domain: alertify-blocks
  * License: GPL-2.0-or-later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -12,8 +12,8 @@
  * Tested up to: 6.8
  * 
  * @since 1.0.0
- * @author MD.NESAR MRIDHA
- * @copyright Copyright (c) 2025, MD.NESAR MRIDHA
+ * @author Md Abul Bashar
+ * @copyright Copyright (c) 2025, Md Abul Bashar
  * @package ALERTIFY\Includes
  */
 

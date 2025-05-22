@@ -2,7 +2,7 @@
 	"name": "alertify-blocks",
 	"version": "0.1.0",
 	"description": "A collection of custom Gutenberg blocks for creating beautiful alerts and notifications in WordPress",
-	"author": "mdnesarmridha",
+	"author": "hmbashar",
 	"license": "GPL-2.0-or-later",
 	"private": true,
 	"workspaces": [
