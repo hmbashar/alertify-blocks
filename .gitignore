@@ -27,7 +27,6 @@ node_modules/
 
 # Output of `wp-scripts plugin-zip`
 *.zip
-package-lock.json
 # dotenv environment variables file
 .env
 
