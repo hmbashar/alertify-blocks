@@ -1,4 +1,4 @@
-=== Alertify Blocks ===
+=== Alertify Blocks – Advanced Notification Blocks ===
 Contributors: hmbashar
 Tags: alert, notice, notification, dismissible notice, gutenberg blocks
 Requires at least: 5.0

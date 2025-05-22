@@ -1,6 +1,6 @@
 <?php 
 /**
- * Plugin Name: Alertify Blocks
+ * Plugin Name: Alertify Blocks – Advanced Notification Blocks
  * Description: A collection of beautiful alert/notice blocks for the WordPress block editor.
  * Version: 0.1.0
  * Author: Md Abul Bashar
