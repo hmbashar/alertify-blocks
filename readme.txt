@@ -60,6 +60,9 @@ Yes, when a user dismisses a notice, it stays dismissed using local storage unti
 Yes, all alert blocks are fully responsive and look great on all devices.
 
 
+== Screenshots ==
+1. Samples
+
 == Changelog ==
 
 = 1.0.0 =
