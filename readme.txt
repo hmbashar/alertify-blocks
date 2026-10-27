@@ -2,8 +2,8 @@
 Contributors: hmbashar
 Tags: alert, notice, notification, dismissible notice, gutenberg blocks
 Requires at least: 5.0
-Tested up to: 6.8
-Stable tag: 1.0.0
+Tested up to: 6.8.2
+Stable tag: 1.0.1
 Requires PHP: 8.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -65,6 +65,10 @@ Yes, all alert blocks are fully responsive and look great on all devices.
 
 == Changelog ==
 
+= 1.0.1 =
+* Updated Node.js build environment to v22 LTS for GitHub Actions compatibility.
+* Updated tested-up-to version to WordPress 6.8.2.
+
 = 1.0.0 =
 * Initial release
 * Added basic alert block
@@ -73,6 +77,9 @@ Yes, all alert blocks are fully responsive and look great on all devices.
 * Added spacing controls
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Maintenance release: updated build environment and tested-up-to version.
 
 = 1.0.0 =
 Initial release with basic and dismissible alert blocks.
