@@ -1,0 +1,21 @@
+{
+    "name": "hmbashar/alertify-blocks",
+    "description": "Alertify Blocks – Advanced Notification Blocks",
+    "license": "GPL-2.0-or-later",
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "ALERTIFY\\": "includes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ALERTIFY\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}

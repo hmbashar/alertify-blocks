@@ -69,6 +69,8 @@ class Loader {
                 ALERTIFY_BLOCKS_DIR . 'blocks/build',
                 ALERTIFY_BLOCKS_DIR . 'blocks/build/blocks-manifest.php'
             );
+            // fall through to register_block_type loop below — metadata collection
+            // only registers the manifest, blocks still need individual registration.
         }
 
         $manifest_data = require ALERTIFY_BLOCKS_DIR . 'blocks/build/blocks-manifest.php';

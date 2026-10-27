@@ -3,8 +3,6 @@ import {
     useBlockProps,
     RichText,
     InspectorControls,
-    BlockControls,
-    AlignmentToolbar
 } from '@wordpress/block-editor';
 import { PanelBody, SelectControl } from '@wordpress/components';
 

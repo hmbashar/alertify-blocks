@@ -7,23 +7,12 @@ import {
 import {
     PanelBody,
     SelectControl,
-    RangeControl,
     ToggleControl,
     TextControl
 } from '@wordpress/components';
 
-import { useEffect } from '@wordpress/element';
-
-export default function Edit({ attributes, setAttributes, clientId }) {
-    const { text, noticeType, showIcon, icon, shape, alertId } = attributes;
-
-    // Set unique ID once
-    useEffect(() => {
-        if (!alertId) {
-            const newId = clientId || Math.random().toString(36).substr(2, 9);
-            setAttributes({ alertId: newId });
-        }
-    }, []);
+export default function Edit({ attributes, setAttributes }) {
+    const { text, noticeType, showIcon, icon, shape } = attributes;
 
     const blockProps = useBlockProps({
         className: `alertify-inline alertify-${noticeType} ${shape === 'pill' ? 'alertify-pill' : 'alertify-square'}`

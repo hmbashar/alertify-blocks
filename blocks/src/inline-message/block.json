@@ -26,9 +26,6 @@
 		"shape": {
 			"type": "string",
 			"default": "pill"
-		},
-		"alertId": {
-			"type": "string"
 		}
 	},
 	"supports": {
