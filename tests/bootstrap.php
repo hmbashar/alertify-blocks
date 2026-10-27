@@ -7,7 +7,7 @@
  */
 
 define( 'ABSPATH', '/tmp/fake-abspath/' );
-define( 'ALERTIFY_BLOCKS_VERSION', '1.0.1' );
+define( 'ALERTIFY_BLOCKS_VERSION', '1.0.2' );
 define( 'ALERTIFY_BLOCKS_DIR', dirname( __DIR__ ) . '/' );
 define( 'ALERTIFY_BLOCKS_URL', 'https://example.com/wp-content/plugins/alertify-blocks/' );
 

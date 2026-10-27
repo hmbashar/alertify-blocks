@@ -3,7 +3,7 @@ Contributors: hmbashar
 Tags: alert, notice, notification, dismissible notice, gutenberg blocks
 Requires at least: 5.0
 Tested up to: 7.1.3
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Requires PHP: 8.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -65,9 +65,16 @@ Yes, all alert blocks are fully responsive and look great on all devices.
 
 == Changelog ==
 
+= 1.0.2 =
+* Fixed: Dismissible Notice block now generates a new unique ID when a block is duplicated, preventing two blocks from being dismissed together by a single click.
+
 = 1.0.1 =
 * Updated Node.js build environment to v22 LTS for GitHub Actions compatibility.
 * Updated tested-up-to version to WordPress 7.1.3.
+* Removed unused imports (BlockControls, AlignmentToolbar, RangeControl) from editor scripts.
+* Removed unused `alertId` attribute from Inline Message block.
+* Fixed dead CSS class `.alertify-notice-close` in Dismissible Notice styles.
+* Fixed duplicate CSS rules in Inline Message styles.
 
 = 1.0.0 =
 * Initial release
@@ -78,8 +85,11 @@ Yes, all alert blocks are fully responsive and look great on all devices.
 
 == Upgrade Notice ==
 
+= 1.0.2 =
+Bug fix: if you used duplicated Dismissible Notice blocks, update immediately — this version ensures each block has its own unique ID.
+
 = 1.0.1 =
-Maintenance release: updated build environment and tested-up-to version.
+Maintenance release: updated build environment, cleaned up unused code and CSS.
 
 = 1.0.0 =
 Initial release with basic and dismissible alert blocks.

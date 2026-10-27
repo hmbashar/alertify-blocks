@@ -10,13 +10,10 @@ import { useEffect } from '@wordpress/element';
 export default function Edit({ attributes, setAttributes, clientId }) {
     const { content, noticeType, dismissDuration, alertId } = attributes;
 
-    // Generate unique alertId only once
+    // Always sync alertId with clientId so duplicated blocks get their own unique ID
     useEffect(() => {
-        if (!alertId) {
-            const newId = clientId || Math.random().toString(36).substr(2, 9);
-            setAttributes({ alertId: newId });
-        }
-    }, []);
+        setAttributes({ alertId: clientId });
+    }, [clientId]);
 
     const blockProps = useBlockProps({
         className: `alertify-box alertify-${noticeType} alertify-dismissible`,

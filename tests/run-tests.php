@@ -5,7 +5,7 @@
  */
 
 define( 'ABSPATH', '/tmp/fake-abspath/' );
-define( 'ALERTIFY_BLOCKS_VERSION', '1.0.1' );
+define( 'ALERTIFY_BLOCKS_VERSION', '1.0.2' );
 define( 'ALERTIFY_BLOCKS_DIR', dirname( __DIR__ ) . '/' );
 define( 'ALERTIFY_BLOCKS_URL', 'https://example.com/wp-content/plugins/alertify-blocks/' );
 
@@ -341,15 +341,15 @@ it( 'all block.json files are valid JSON', function () {
 
 it( 'main plugin file has correct version constant', function () {
     $src = file_get_contents( ALERTIFY_BLOCKS_DIR . 'alertify-blocks.php' );
-    if ( strpos( $src, "define('ALERTIFY_BLOCKS_VERSION', '1.0.1')" ) === false ) {
-        throw new \RuntimeException( "Version constant not set to '1.0.1' in alertify-blocks.php." );
+    if ( strpos( $src, "define('ALERTIFY_BLOCKS_VERSION', '1.0.2')" ) === false ) {
+        throw new \RuntimeException( "Version constant not set to '1.0.2' in alertify-blocks.php." );
     }
 } );
 
 it( 'readme.txt stable tag matches plugin version', function () {
     $readme = file_get_contents( ALERTIFY_BLOCKS_DIR . 'readme.txt' );
-    if ( strpos( $readme, 'Stable tag: 1.0.1' ) === false ) {
-        throw new \RuntimeException( "Stable tag in readme.txt does not match 1.0.1." );
+    if ( strpos( $readme, 'Stable tag: 1.0.2' ) === false ) {
+        throw new \RuntimeException( "Stable tag in readme.txt does not match 1.0.2." );
     }
 } );
 
